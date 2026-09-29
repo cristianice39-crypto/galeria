@@ -1,0 +1,74 @@
+/* ===== SUBTÍTULO SEMANA ===== */
+.subtitulo-semana {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 900;
+    color: #000;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 40px 0 25px;
+    text-transform: uppercase;
+}
+
+/* ===== GALERÍA CON MOVIMIENTO (4x3) ===== */
+.galeria-movimiento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.foto-movimiento {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    background: #eee;
+}
+
+.mi-video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.foto-movimiento:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .galeria-movimiento {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .mi-video {
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+    .galeria-movimiento {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .mi-video {
+        height: 130px;
+    }
+}
+
+@media (max-width: 400px) {
+    .galeria-movimiento {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .mi-video {
+        height: 200px;
+    }
+}
